@@ -1,7 +1,6 @@
 import { Component ,OnInit} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Users } from '../../interfaces/Users';
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, PLATFORM_ID } from '@angular/core';
 
@@ -15,7 +14,7 @@ export class LoginComponent implements OnInit{
   isExist:boolean=true;
   Matched:boolean=true;
 
-  Users:Users[]=[]
+  Users:any[]=[]
   constructor(private _Router:Router,@Inject(PLATFORM_ID) private platformId: Object){}
 
 ngOnInit():void{

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Users } from '../../interfaces/Users';
 
 
 
@@ -14,7 +13,7 @@ import { Users } from '../../interfaces/Users';
 export class SignupComponent {
    isExist:boolean=false
 
-  Users:Users[]=[];
+  Users:any[]=[];
 
   constructor(private _Router:Router){
     const usersFromStorage = localStorage.getItem('users');
